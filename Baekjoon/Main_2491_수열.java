@@ -9,6 +9,7 @@ public class Main_2491_수열 {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(in.readLine());
 		int arr[] = new int[N];
+		int result = 0;
 		StringTokenizer st = new StringTokenizer(in.readLine());
 		for (int i = 0; i < N; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
@@ -31,7 +32,10 @@ public class Main_2491_수열 {
 			}
 			result2 = Math.max(cnt2, result2);
 		}
-		int result = Math.max(result1, result2);
+		result = Math.max(result1, result2);
+		if (N == 1) {
+			result = 1;
+		}
 		System.out.println(result);
 	}
 
